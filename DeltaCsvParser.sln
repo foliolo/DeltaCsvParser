@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27625.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeltaCsvParser", "DeltaCsvParser\DeltaCsvParser.csproj", "{AEA8BC1E-63DC-4536-97DE-1337E17D2D83}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeltaCsvParserTester", "DeltaCsvParser\DeltaCsvParserTester.csproj", "{AEA8BC1E-63DC-4536-97DE-1337E17D2D83}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeltaUI", "DeltaUI\DeltaUI.csproj", "{BCFB80D0-84AD-4EDA-A134-2AF6ACABA452}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeltaCsvParserLib", "DeltaCsvParserLib\DeltaCsvParserLib.csproj", "{FE42CA65-4AF7-4D36-A7D4-C0010703F2EE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{AEA8BC1E-63DC-4536-97DE-1337E17D2D83}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AEA8BC1E-63DC-4536-97DE-1337E17D2D83}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AEA8BC1E-63DC-4536-97DE-1337E17D2D83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCFB80D0-84AD-4EDA-A134-2AF6ACABA452}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCFB80D0-84AD-4EDA-A134-2AF6ACABA452}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCFB80D0-84AD-4EDA-A134-2AF6ACABA452}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCFB80D0-84AD-4EDA-A134-2AF6ACABA452}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE42CA65-4AF7-4D36-A7D4-C0010703F2EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE42CA65-4AF7-4D36-A7D4-C0010703F2EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE42CA65-4AF7-4D36-A7D4-C0010703F2EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE42CA65-4AF7-4D36-A7D4-C0010703F2EE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

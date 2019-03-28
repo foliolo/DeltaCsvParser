@@ -4,16 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{AEA8BC1E-63DC-4536-97DE-1337E17D2D83}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>DeltaCsvParser</RootNamespace>
-    <AssemblyName>DeltaCsvParser</AssemblyName>
+    <ProjectGuid>{FE42CA65-4AF7-4D36-A7D4-C0010703F2EE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DeltaCsvParserLib</RootNamespace>
+    <AssemblyName>DeltaCsvParserLib</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,7 +23,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -32,8 +31,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EPPlus, Version=4.5.3.1, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.4.5.3.1\lib\net40\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -42,11 +48,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="ExchangeData\CommonData.cs" />
+    <Compile Include="ExchangeData\BinanceExchange.cs" />
+    <Compile Include="ExchangeData\Binance\BinanceDepositWithdrawData.cs" />
+    <Compile Include="ExchangeData\Binance\BinanceTransactionData.cs" />
+    <Compile Include="ExchangeData\Bittrex\BittrexData.cs" />
+    <Compile Include="ExchangeData\Delta\DeltaData.cs" />
+    <Compile Include="ExchangeData\BaseExchangeData.cs" />
+    <Compile Include="ExchangeData\Utils.cs" />
+    <Compile Include="Interfaces\IExchangeParcelableCsv.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <Folder Include="ExchangeData\Coinbase\" />
+    <Folder Include="ExchangeData\Cryptonit\" />
+    <Folder Include="ExchangeData\Kraken\" />
+    <Folder Include="ExchangeData\Poloniex\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
